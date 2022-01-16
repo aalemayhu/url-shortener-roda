@@ -4,6 +4,5 @@ gem 'sequel'
 gem 'roda'
 
 group :development do 
-	gem 'rspec-roda'
 	gem 'rspec'
 end
