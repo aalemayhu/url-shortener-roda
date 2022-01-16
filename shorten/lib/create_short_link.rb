@@ -20,4 +20,8 @@ class CreateShortLink
       end
     end
   end
+
+  def save
+    DB[:short_links].insert(short_link: @short_link, url: @url)
+  end
 end

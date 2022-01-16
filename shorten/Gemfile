@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem 'rack-unreloader'
+gem 'sequel_pg'
 gem 'sequel'
 gem 'roda'
 

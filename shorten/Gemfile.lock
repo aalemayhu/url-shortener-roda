@@ -2,10 +2,9 @@ GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.5.0)
-    dry-inflector (0.2.1)
+    pg (1.2.3)
     rack (2.2.3)
-    rack-test (1.1.0)
-      rack (>= 1.0, < 3)
+    rack-unreloader (1.8.0)
     roda (3.52.0)
       rack
     rspec (3.10.0)
@@ -17,27 +16,24 @@ GEM
     rspec-expectations (3.10.2)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
-    rspec-its (1.2.0)
-      rspec-core (>= 3.0.0)
-      rspec-expectations (>= 3.0.0)
     rspec-mocks (3.10.2)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
-    rspec-roda (0.2.2)
-      dry-inflector
-      rack-test (~> 1.0)
-      roda
-      rspec (~> 3.7)
-      rspec-its (~> 1.2.0)
     rspec-support (3.10.3)
+    sequel (5.52.0)
+    sequel_pg (1.14.0)
+      pg (>= 0.18.0, != 1.2.0)
+      sequel (>= 4.38.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  rack-unreloader
   roda
   rspec
-  rspec-roda
+  sequel
+  sequel_pg
 
 BUNDLED WITH
    2.1.4
