@@ -6,8 +6,10 @@ class App < Roda
   route do |r|
     r.get String do |_path|
       lookup = DB[:short_links].where(short_link: _path)
-      return r.halt 404 if lookup.empty?
-
+      if lookup.empty?
+        response.status = 404
+        return r.halt
+      end
       destination = lookup.first
       r.redirect destination[:url], 301
     end
