@@ -7,7 +7,7 @@ class App < Roda
   route do |r|
     r.get String do |_path|
       redis_lookup = CACHE.get(_path)
-      return r.redirect redis_lookup, 301 if redis_lookup
+      return r.redirect redis_lookup, 302 if redis_lookup
 
       db_lookup = DB[:short_links].where(short_link: _path)
       if db_lookup.empty?
