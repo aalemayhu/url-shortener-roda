@@ -23,5 +23,10 @@ class CreateShortLink
 
   def save
     DB[:short_links].insert(short_link: @short_link, url: @url)
+  rescue Sequel::UniqueConstraintViolation
+    recreate_on_collision do |link|
+      DB[:short_links].where(short_link: link).count.positive?
+    end
+    DB[:short_links].insert(short_link: @short_link, url: @url)
   end
 end
