@@ -1,3 +1,7 @@
 source "https://rubygems.org"
 
+gem 'sequel_pg'
+gem 'sequel'
+gem 'rack'
+gem 'roda'
 gem 'redis'
