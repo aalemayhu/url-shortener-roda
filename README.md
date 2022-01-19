@@ -13,8 +13,9 @@ number of seconds in 31 days.
 The code base is split into the following directories shorten and redirect.
 Shorten writes changes to the database while redirect only makes lookups.
 
-The project is built with the [Roda][0] framework, the database interaction is done with [Sequel][1] using [PostgresSQL][2].
+The project is built with the [Roda][0] framework, the database interaction is done with [Sequel][1] using [PostgresSQL][2]. For caching [Redis][3] is used.
 
 [0]: https://github.com/jeremyevans/roda
 [1]: https://github.com/jeremyevans/sequel
 [2]: https://github.com/postgres/postgres
+[3]: https://redis.io/
