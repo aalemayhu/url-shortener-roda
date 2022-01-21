@@ -25,11 +25,12 @@ and connect to a database cluser. This approach accepts that conflicts will aris
 For the reader we can use Redis with `allkeys-lru` where the less recently used keys get removed
 first with an appropriate `maxmemory`.
 
-## Uadressed Concerns
+## Unadressed Concerns
 
 - Is the `securerandom` secure enough?
 - What is the likely hood of collisions in practice?
 - How much storage for a single url?
+- Rate limiting so one user can't abuse the service
 
 ## Acknowledgements
 
